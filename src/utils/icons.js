@@ -1,0 +1,17 @@
+export const darkMode      =  " https://cdn-icons-png.flaticon.com/512/4836/4836849.png  "
+export const lightMode     =  " https://cdn-icons-png.flaticon.com/512/10562/10562157.png "
+export const indFlag       =  " https://cdn-icons-png.flaticon.com/512/14009/14009677.png "
+export const calendar      =  " https://cdn-icons-png.flaticon.com/512/6706/6706193.png "
+export const locaionIcon   =  " https://cdn-icons-png.flaticon.com/512/18415/18415299.png "
+export const exeprience    =  " https://cdn-icons-png.flaticon.com/512/1149/1149081.png "
+export const educationIcon =  " https://cdn-icons-png.flaticon.com/512/1940/1940569.png "
+export const goTo          =  "    https://cdn-icons-png.flaticon.com/512/7268/7268615.png "
+export const gitHub        =  " https://cdn-icons-png.flaticon.com/512/2111/2111432.png "
+export const fireBase      =  " https://favicons.statusgator.com/MqOvqtHCckWT6WuS.png "
+export const tailwindIcon  =  " https://img.icons8.com/?size=256&id=4PiNHtUJVbLs&format=png "
+export const reactIcon     =  " https://cdn-icons-png.flaticon.com/512/875/875209.png  "
+export const gptAPI        =  " src/assets/image copy.png "
+export const codingIcon    =  " https://cdn-icons-png.flaticon.com/512/16913/16913191.png "
+export const userLogedInIcon  =  " https://cdn-icons-png.flaticon.com/512/4727/4727424.png"
+
+

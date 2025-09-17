@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-ms: 420px;
+}
+
+:root {
+  --main-bg : #020817;
+  --secondry-bg : #1B212D; /* #0A1222 */
+  --main-text : #94A3B8;
+  --about-focus : #F19B3D
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.element:in-view {
+  animation: appear 2s linear
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: translateX(-45%) scale(0.2); /* upar se aur chhota */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1); /* apni jagah aur real size */
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn 1.2s linear ;
+}
+
+@keyframes rotatePendulum  {
+   0%  { transform: rotate(-1deg); }
+  25%  { transform: rotate( 1deg); }  /* aage upar */
+  50%  { transform: rotate(-1deg); }
+  75%  { transform: rotate( 1deg); }   /* piche neeche */
+  100% { transform: rotate(-1deg); }
+}
+@keyframes rotatePendulumr  {
+   0%  { transform: rotate( 1deg); }
+  25%  { transform: rotate(-1deg); }  /* aage upar */
+  50%  { transform: rotate( 1deg); }
+  75%  { transform: rotate(-1deg); }   /* piche neeche */
+  100% { transform: rotate( 1deg); }
+}
+
+.rotatePendulum  {
+  animation: rotatePendulum 6s ease-in-out infinite;
+}
+.rotatePendulumr  {
+  animation: rotatePendulumr 6s ease-in-out infinite;
+}
+
+@keyframes shadowPulse {
+  0%   { box-shadow: 0 0 10px rgba(0, 0, 255, 0.4); }
+  50%  { box-shadow: 0 0 25px rgba(0, 0, 255, 0.4); }
+  100% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.4); }
+}
+
+.shadowPulse {
+  animation: shadowPulse 3s ease-in-out infinite;
+}
+
+
+@keyframes hide {
+    0% { 
+   opacity: 0.8;
+  }
+  50% { 
+    opacity: 0.5;
+  }
+  100% { 
+    opacity: 0;
+  }
+ 
+}
+
+.hide {
+  @apply animate-[hide_2s_ese-in-out_forwards];
+}
+
+
+
+@layer utilities {
+
+  .animate-move-left {
+    animation: moveLeft 5s linear infinite;
+  }
+  .ani-smooth {
+    @apply transition-all duration-400 ease-linear;
+  }
+  .text-gradient-g{
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-slate-50 to-green-400
+  }
+  .text-gradient-p{
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-blue-400 to-purple-600
+  }
+
+  .max-w{
+    @apply max-w-[1440px] m-auto
+  }
+  .bg-main{
+    @apply bg-[var(--main-bg)]
+  }
+  .beforeCon  {
+    @apply before:content-[""] before:absolute before:h-full before:w-full 
+  }
+  .afterCon  {
+    @apply after:content-[''] after:absolute after:h-full after:w-full 
+  }
+
+}
