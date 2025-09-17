@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 src/utils/languageConstent.js
+public/YograjResume.pdf
