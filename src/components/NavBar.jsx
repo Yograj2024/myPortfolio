@@ -57,7 +57,7 @@ const NavBar = () => {
           <ul onClick = { updateLanguage } className={`absolute z-[2] top-[2rem] right-0 text-black bg-purple-50 border border-slate-300 w-[7rem] overflow-auto rounded-b-[12px] hide-scrollbar max-h-0  opacity-0 ani-smooth group-hover:max-h-[10rem] group-hover:opacity-100`}>
             {
               supportedLanguage.map( (language,index) => {
-                const {liLanCode, lanName : liLanName} = language
+                const {lanCode, lanName : liLanName} = language
                 return <li key={index} 
                   data-lang={JSON.stringify(language)} 
                   className={`grid grid-cols-[auto_90%] items-center px-[1.5rem] gap-x-[8px] hover:bg-purple-200 py-[5px] capitalize `}>

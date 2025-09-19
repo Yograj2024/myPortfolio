@@ -1,4 +1,3 @@
-import { object } from "framer-motion/client";
 
  const baseNav = [
     { key: "home",     to: "/",         type: "link" },
@@ -199,9 +198,8 @@ const serviceIcons = {
     design      : { icon: " https://cdn-icons-png.flaticon.com/512/10982/10982562.png" },
     performance : { icon: "https://cdn-icons-png.flaticon.com/512/18882/18882511.png " }
 }
-
 export const service = {
-    hi : [
+    hi:[
         {
             title : "यूज़र-सेंट्रिक",
             description : "मैं हर डिज़ाइन और डेवलपमेंट निर्णय में उपयोगकर्ताओं को पहले स्थान पर रखता हूँ।",
@@ -220,6 +218,28 @@ export const service = {
         {
             title : "सुंदर डिज़ाइन",
             description : "ऐसे सहज इंटरफेस बनाना जो उपयोगकर्ताओं को प्रसन्न करें और उनके अनुभव को बेहतर बनाएं।",
+            ...serviceIcons.design
+        },
+    ],
+    mr:[
+        {
+            title :"वापरकर्ता-केंद्रित",
+            description : "मी प्रत्येक डिझाइन आणि विकास निर्णयामध्ये वापरकर्त्यांना प्रथम स्थान देतो.",
+            ...serviceIcons.userCentric
+        },
+        {
+            title : "परफॉर्मन्स",
+            description : "फंक्शनॅलिटीशी तडजोड न करता वेग आणि कार्यक्षमतेसाठी ऑप्टिमाइझ करणे.",
+            ...serviceIcons.performance
+        },
+        {
+            title :" स्वच्छ कोड",
+            description :  "काळाच्या कसोटीवर टिकणारा, देखभालयोग्य, स्केलेबल आणि कार्यक्षम कोड लिहिणे.",
+            ...serviceIcons.cleanCode
+        },
+        {
+            title : "सुंदर रचना",
+            description : "सहज समजणारे इंटरफेस तयार करणे जे वापरकर्त्यांना आनंदित करतात आणि त्यांचा अनुभव सुधारतात.",
             ...serviceIcons.design
         },
     ],
@@ -277,3 +297,68 @@ export const skillSec = {
     }
 }
 
+export const projectSec = {
+    hi:{
+        secHeading : "प्रोजेक्ट्स",
+        secIntro : "ये प्रोजेक्ट्स मेरी क्षमता को दर्शाते हैं कि मैं उपयोगी और यूज़र-फ्रेंडली एप्लिकेशन बना सकता हूँ। मैं साफ-सुथरा, व्यवस्थित, स्केलेबल और पुन: उपयोग करने योग्य कोड लिखने पर ध्यान देता हूँ, ताकि प्रोजेक्ट के बढ़ने के साथ-साथ उसे आसानी से मेंटेन और आगे विकसित किया जा सके। ये प्रोजेक्ट्स मेरे डिजाइन, डेवलपमेंट और इम्प्लिमेंटेशन के कौशल को भी उजागर करते हैं।",  
+    },
+    mr:{
+        secHeading :"प्रोजेक्ट्स",
+        secIntro : "हे प्रोजेक्ट्स माझी क्षमता दाखवतात की मी उपयुक्त आणि युजर-फ्रेंडली अॅप्लिकेशन्स तयार करू शकतो. मी स्वच्छ, व्यवस्थित, स्केलेबल आणि पुन्हा वापरता येणारा कोड लिहिण्यावर लक्ष केंद्रित करतो,ज्यामुळे प्रोजेक्ट वाढत असताना त्याला सहजपणे मेंटेन आणि विकसित करता येईल. हे प्रोजेक्ट्स माझी डिझाईन, डेव्हलपमेंट आणि इम्प्लिमेंटेशन कौशल्ये देखील दाखवतात."
+    },
+    en:{
+        secHeading : "projects",
+        secIntro :"These projects showcase my ability to build practical and user-friendly applications. I focus on writing clean, organized, scalable, and reusable code, following best practices to ensure it is easy to maintain and grow as the project evolves. These project also highlights my skills in design, development, and implementation. ",
+    }
+}
+
+export const gptDetails = {
+  techStack :  [ 
+    {
+      tech : "react", css : 'h-[2.3rem]',
+      imgSrc : "https://cdn-icons-png.flaticon.com/512/875/875209.png",
+    },
+    {
+      tech : "tailwind", css : 'h-[2.3rem]',
+      imgSrc : "https://img.icons8.com/?size=256&id=4PiNHtUJVbLs&format=png",
+    },
+    {
+      tech : "fireBase", css : 'h-[2rem]',
+      imgSrc : "https://favicons.statusgator.com/MqOvqtHCckWT6WuS.png",
+    },
+    {
+      tech : "gpt-4", css : 'h-[2.3rem]',
+      imgSrc : "src/assets/image copy.png",
+    }
+  ],
+  en: {
+    heading: "Netflix GPT feature",
+    introPoints :  [
+      "it is a movie recommendation app.",
+      "Users can enter any query to get personalized movie suggestions.",
+      "It provide movie's information of each movie.",
+      "it's provides recommendations and details but not play videos.",
+      "The app was created using the following tools :-"
+    ],
+  },
+  hi: {
+    heading: "Netflix GPT फीचर",
+    introPoints :   [
+      "यह एक मूवी सुझाव ऐप है।",
+      "यूज़र कोई भी सवाल दर्ज करके व्यक्तिगत मूवी सुझाव प्राप्त कर सकते हैं।",
+      "यह प्रत्येक मूवी की जानकारी प्रदान करता है।",
+      "यह सुझाव और जानकारी प्रदान करता है लेकिन वीडियो प्ले नहीं होगी।",
+      "यह ऐप इन टूल्स का उपयोग करके बनाया गया है :-"
+    ],
+  },
+  mr: {
+    heading: "Netflix GPT वैशिष्ट्य",
+    introPoints :  [
+      "हे एक चित्रपट सुझाव अॅप आहे.",
+      "युजर कोणताही प्रश्न टाकून वैयक्तिक चित्रपट सुझाव मिळवू शकतात.",
+      "हे प्रत्येक चित्रपटाची माहिती देते.",
+      "हे सुझाव आणि तपशील देते पण व्हिडिओ प्ले होणार नाही.",
+      "हे अॅप या टूल्स वापरून तयार केले आहे :-"
+    ],
+  }
+};

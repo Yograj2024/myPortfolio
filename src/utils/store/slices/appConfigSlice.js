@@ -16,9 +16,9 @@ const appConfigSlice = createSlice({
 
     reducers : {
         setLanguage : (state, action) => {
-            const {liLanCode, country, liLanName, countryCode : flag } = action.payload;
-            state.language.lanCode    = liLanCode,
-            state.language.lanName    = liLanName,
+            const {lanCode, country, lanName, countryCode : flag } = action.payload;
+            state.language.lanCode    = lanCode,
+            state.language.lanName    = lanName,
             state.language.country    = country,
             state.language.flag       = `https://flagcdn.com/w320/${flag.toLowerCase()}.png`
         },

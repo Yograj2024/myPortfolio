@@ -1,6 +1,7 @@
 import AboutMe from './about/AboutMe';
 import Hero from './Hero';
 import Skills from './skills/Skills'
+import Projects from './projects/Projects'
 
 const MainContainer = () => {
 
@@ -9,7 +10,7 @@ const MainContainer = () => {
       <Hero />
       <AboutMe/>
       <Skills />
-      {/* <Projects/> */}
+      <Projects/>
       {/* <ContectSec/> */}
     </>
   );
