@@ -25,7 +25,7 @@ export const contact = [
 ]
 
 export const contactIcon = [
-    {
+        {
         reDirectPath : "https://github.com/Yograj2024",
         iconClass : "fa-brands fa-github text-[1.5rem] "
     },

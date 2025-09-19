@@ -4,9 +4,9 @@ const appConfigSlice = createSlice({
     name : "appConfig",
     initialState : {
         language:  {
-            lanCode : 'en',
-            lanName : 'english',
-            country : 'GB',
+            lanCode : 'hi',
+            lanName : 'hindi',
+            country : 'IN',
             flag    : 'https://flagcdn.com/w320/in.png'
         },
         theme : {

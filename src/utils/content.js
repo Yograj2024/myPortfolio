@@ -362,3 +362,48 @@ export const gptDetails = {
     ],
   }
 };
+
+export const contactSec = {
+    hi:{
+        secHeading : "संपर्क करें",
+        secIntro  : "मैं आपसे जुड़ना पसंद करूंगा...! आपके पास कोई प्रोजेक्ट है या किसी अवसर पर चर्चा करना चाहते हैं...? चलिए मिलकर कुछ शानदार बनाते हैं। मैं हमेशा नए विचारों, सहयोग और बातचीत के लिए तैयार हूं — बस मुझे एक संदेश भेजें और मैं जल्दी ही आपको जवाब दूंगा।",
+        formContent:{
+            title : "अपना संदेश लिखें",
+            placeHolders : {
+                name:"आपका नाम", 
+                email:"आपका ईमेल" ,
+                message:"अपना संदेश लिखें", 
+                subject:"विषय"
+            },
+            btn:"संदेश भेजें"
+        }
+    },
+    mr:{
+        secHeading : "आमच्याशी संपर्क साधा",
+        secIntro : "मला तुमच्याशी संपर्क साधायला आवडेल...! एखादा प्रकल्प आहे की एखाद्या संधीवर चर्चा करायची आहे...? चला एकत्र काहीतरी अद्भुत बनवूया. मी नेहमीच नवीन कल्पना, सहकार्य आणि संभाषणासाठी खुला असतो—फक्त मला एक संदेश पाठवा आणि मी लवकरच प्रतिसाद देईन।",
+        formContent:{
+            title : "तुमचा संदेश लिहा",
+            placeHolders : {
+                name:"तुमचे नाव", 
+                email:"तुमचा ईमेल" ,
+                message:"तुमचा संदेश लिहा", 
+                subject:"विषय"
+            },
+            btn:"संदेश पाठवा"
+        }
+    },
+    en:{
+        secHeading : "get in touch",
+        secIntro : "I’d love to connect with you...! Got a project in mind or want to discuss an opportunity...? Let’s build something amazing together. I’m always open to new ideas, collaborations, and conversations — just drop me a message and I’ll get back to you quickly.",
+        formContent:{
+            title : "Write to Me",
+            placeHolders : {
+                name:"your name", 
+                email:"your email" ,
+                message:"type your message...", 
+                subject:"subject"
+            },
+            btn:"send message"
+        }
+    },
+}

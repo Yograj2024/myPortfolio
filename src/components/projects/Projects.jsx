@@ -39,7 +39,6 @@ const Projects = () => {
         projects.map( (pro) => {
           const {project, projectDetail, css, projectName} = pro;
           const btns = pro[lanCode]
-          console.log(btns)
           return <div className= {`mt-[1rem] md:mt-0`}>
               {/* <h3 className= {`pl-[1rem] mb-[1rem] text-[1.28rem] md:text-[1.8rem] capitalize font-medium `}>{projectName}</h3> */}
               <div className={`relative rounded-[1.5rem] h-[25rem] border border-red-600 w-[95%] m-auto group ${css} beforeCon overflow-hidden transition-all duration-300   ease-in-out  hover:before:backdrop-blur-[3px]  ${theme == "dark" ? "before:bg-black/60" : "before:bg-black/40"} before:rounded-[1.5rem]  `}>
