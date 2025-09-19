@@ -1,3 +1,4 @@
+import AboutMe from './about/AboutMe';
 import Hero from './Hero';
 
 const MainContainer = () => {
@@ -5,7 +6,7 @@ const MainContainer = () => {
   return (
     <>
       <Hero />
-      {/* <AboutMe/> */}
+      <AboutMe/>
       {/* <Skills /> */}
       {/* <Projects/> */}
       {/* <ContectSec/> */}

@@ -4,13 +4,12 @@ import { HashLink } from 'react-router-hash-link';
 import { navBar } from '../utils/content';
 import { getLanConfig, getTheme } from '../utils/getAppConfig';
 import { codingIcon, darkMode, lightMode } from '../utils/icons';
-import { navHeading, supportedLanguage } from '../utils/languageConstent';
+import { supportedLanguage } from '../utils/languageConstent';
 import { setLanguage, setTheme } from '../utils/store/slices/appConfigSlice';
 
 const NavBar = () => {
 
   const {lanName, lanCode, flag}  = getLanConfig(["lanName", "lanCode", "flag"]);
-  const {home, aboutMe, projects, contact} = navHeading[lanCode]
 
   const theme = getTheme();
   const dispatch = useDispatch();
@@ -21,12 +20,6 @@ const NavBar = () => {
     dispatch(setLanguage(dataSet))
   }
 
-  // const navItems2 = [
-  //   { label: home,     to: "/",         type: "link" },              // normal route
-  //   { label: aboutMe,  to: "#aboutMe",  type: "hash" },   // hash link
-  //   { label: projects, to: "#projects", type: "hash" },
-  //   { label: contact,  to: "#contact",  type: "hash" },
-  // ];
   const {siteTitle, navItems} = navBar
 
   return <nav className={`max-w h-full w-full flex items-center justify-between px-[1rem] lg:px-[1.5rem]`}>
@@ -65,7 +58,6 @@ const NavBar = () => {
             {
               supportedLanguage.map( (language,index) => {
                 const {liLanCode, lanName : liLanName} = language
-                console.log(liLanCode)
                 return <li key={index} 
                   data-lang={JSON.stringify(language)} 
                   className={`grid grid-cols-[auto_90%] items-center px-[1.5rem] gap-x-[8px] hover:bg-purple-200 py-[5px] capitalize `}>
