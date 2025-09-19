@@ -1,4 +1,4 @@
-import { education } from "./languageConstent";
+import { object } from "framer-motion/client";
 
  const baseNav = [
     { key: "home",     to: "/",         type: "link" },
@@ -38,16 +38,8 @@ function navItemsArray (lan) {
 } 
 
 export const navBar = {
-    siteTitle : {
-        hi:"पोर्टफोलियो",
-        mr:"पोर्टफोलिओ",
-        en:"portfolio"
-    },
-    navItems  : {
-       hi: navItemsArray("hi"),
-       mr: navItemsArray("mr"),
-       en: navItemsArray("en")
-    }
+    siteTitle : { hi:"पोर्टफोलियो", mr:"पोर्टफोलिओ", en:"portfolio" },
+    navItems  : { hi: navItemsArray("hi"), mr: navItemsArray("mr"), en: navItemsArray("en") }
 }
 
 export const heroSection = {
@@ -104,7 +96,7 @@ export const aboutMeSec = {
                     institution : "एस.सी. गुरिया इंस्टीट्यूट ऑफ मैनेजमेंट एंड लॉ कॉलेज",
                     degree : "कंप्यूटर एप्लीकेशन में स्नातक",
                     university : "कुमाऊँ विश्वविद्यालय, नैनीताल से संबद्ध",
-                    location : "काशीपुर , उत्तराखंड"
+                    location : "काशीपुर , उत्तराखंड",
                 },
                 {
                     id : "school",
@@ -163,7 +155,7 @@ export const aboutMeSec = {
             ],
         },
         education : {
-            heading : "शिक्षा",
+            heading : "शिक्षण",
             educationHistory : [
                 {
                     id : "graduation",
@@ -183,3 +175,105 @@ export const aboutMeSec = {
         }  
     }
 }
+
+const skillsCore = {
+    frontend: {
+        icon    : "https://cdn-icons-png.flaticon.com/512/11074/11074357.png",
+        iconCss : "bg-blue-300/20",
+        skillSet  : ["React", "ComponentBased Development", "HTML/CSS", "JavaScript", "Tailwind", "UI Design", "Redux", "Form Handling"],
+    },
+    backend: {
+        icon    : "https://cdn-icons-png.flaticon.com/512/657/657695.png",
+        iconCss : "bg-yellow-500/20",
+        skillSet  : ["Laravel", "MySQL", "REST APIs" , "CRUD Operations", "MVC Architecture"],
+    },
+    tools: {
+        icon    : "https://cdn-icons-png.flaticon.com/512/10161/10161143.png",
+        iconCss : "bg-blue-300/20",
+        skillSet  : ["GitHub", "VS Code", "Git" ,"MySQL Workbench", "NPM", "Postman"],
+    }
+}
+const serviceIcons = {
+    userCentric : { icon: " https://cdn-icons-png.flaticon.com/512/18743/18743455.png" },
+    cleanCode   : { icon: "https://cdn-icons-png.flaticon.com/512/17365/17365478.png " },
+    design      : { icon: " https://cdn-icons-png.flaticon.com/512/10982/10982562.png" },
+    performance : { icon: "https://cdn-icons-png.flaticon.com/512/18882/18882511.png " }
+}
+
+export const service = {
+    hi : [
+        {
+            title : "यूज़र-सेंट्रिक",
+            description : "मैं हर डिज़ाइन और डेवलपमेंट निर्णय में उपयोगकर्ताओं को पहले स्थान पर रखता हूँ।",
+            ...serviceIcons.userCentric
+        },
+        {
+            title : "परफॉर्मेंस",
+            description : "फ़ंक्शनैलिटी से समझौता किए बिना गति और दक्षता के लिए ऑप्टिमाइज़ करना।",
+            ...serviceIcons.performance
+        },
+        {
+            title : "क्लीन कोड",
+            description : "समय की कसौटी पर खरा उतरने वाला, रखरखाव योग्य, स्केलेबल और कुशल कोड लिखना।",
+            ...serviceIcons.cleanCode
+        },
+        {
+            title : "सुंदर डिज़ाइन",
+            description : "ऐसे सहज इंटरफेस बनाना जो उपयोगकर्ताओं को प्रसन्न करें और उनके अनुभव को बेहतर बनाएं।",
+            ...serviceIcons.design
+        },
+    ],
+    en : [
+        {
+            title : "User-Centric",
+            description : "Putting users first in every design and development decision I make.",
+            ...serviceIcons.userCentric
+        },
+        {
+            title : "Performance",
+            description : "Optimizing for speed and efficiency without compromising on functionality.",
+            ...serviceIcons.performance
+        },
+        {
+            title : "Clean Code",
+            description :  "Writing maintainable, scalable, and efficient code that stands the test of time.",
+            ...serviceIcons.cleanCode
+        },
+        {
+            title : "Beautiful Design",
+            description : "Creating intuitive interfaces that delight users and enhance their experience.",
+            ...serviceIcons.design
+        },
+    ]
+}
+
+export const skillSec = {
+    hi : {
+        secHeading : "कौशल",
+        secIntro : "React.js, Tailwind CSS और JavaScript का उपयोग करके आकर्षक और रिस्पॉन्सिव वेब इंटरफेस बनाना। बैकएंड डेवलपमेंट और डेटाबेस मैनेजमेंट के लिए Laravel और SQL से परिचित हूँ, API इंटीग्रेशन का अनुभव है और फुल-स्टैक डेवलपमेंट वर्कफ़्लोज़ की समझ है।",
+        skillsData : [
+            { title   : "फ्रंटएंड डेवलपमेंट",    ...skillsCore.frontend },
+            { title   : "बैकएंड डेवलपमेंट",    ...skillsCore.backend },
+            { title   : "टूल्स एंड टेक्नोलॉजीज", ...skillsCore.tools }
+        ]
+    },
+    en : {
+        secHeading : "slkills",
+        secIntro : "Building modern and responsive web interfaces using React.js, Tailwind CSS, and JavaScript. Familiar with Laravel and SQL for backend development and database management, experienced in API integration, and having a good understanding of full-stack development workflows.",
+        skillsData : [
+            { title   : "frontend Ddevelopment", ...skillsCore.frontend },
+            { title   : "backend development",   ...skillsCore.backend },
+            { title   : "tools & technologies",  ...skillsCore.tools }
+        ]
+    },
+    mr : {
+        secHeading : "कौशल्ये",
+        secIntro : "React.js, Tailwind CSS आणि JavaScript वापरून आकर्षक आणि प्रतिसादक्षम वेब इंटरफेस तयार करतो. Backend development आणि database management साठी Laravel आणि SQL मध्ये पारंगत आहे, API integration चा अनुभव आहे आणि full-stack development workflows चे चांगले ज्ञान आहे.",
+        skillsData : [
+            { title   : "फ्रंटएंड डेव्हलपमेंट",    ...skillsCore.frontend },
+            { title   : "बॅकएंड डेव्हलपमेंट",    ...skillsCore.backend },
+            { title   : "टूल्स अँड टेक्नॉलॉजीज", ...skillsCore.tools }
+        ]
+    }
+}
+

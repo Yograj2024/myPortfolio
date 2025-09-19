@@ -1,5 +1,6 @@
 import AboutMe from './about/AboutMe';
 import Hero from './Hero';
+import Skills from './skills/Skills'
 
 const MainContainer = () => {
 
@@ -7,7 +8,7 @@ const MainContainer = () => {
     <>
       <Hero />
       <AboutMe/>
-      {/* <Skills /> */}
+      <Skills />
       {/* <Projects/> */}
       {/* <ContectSec/> */}
     </>
