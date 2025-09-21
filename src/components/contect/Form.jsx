@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { contactSec } from "../../utils/content";
 import { getLanConfig, getTheme } from "../../utils/getAppConfig";
 
@@ -10,16 +11,47 @@ const Form = () => {
   const {title, btn} = contactSec[lanCode]?.formContent
   const { name, email, message, subject} = contactSec[lanCode]?.formContent?.placeHolders
 
+  const userName = useRef(), userEmail = useRef(), mailSub = useRef(), userMess = useRef() 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("call submit")
+
+    try {
+      // const getReq = await fetch("https://portfolio-backend-nfi6.onrender.com/api/message")
+      // const getJson = await getReq.json();
+      // console.log(getJson);
+      const res = await fetch("https://portfolio-backend-nfi6.onrender.com/api/message", {
+        method : "POST",
+        headers : {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: userName.current.value,
+          email: userEmail.current.value,
+          mailSub: mailSub.current.value,
+          message: userMess.current.value,
+        }),
+      });
+      const json = await res.json();
+      if(json.status == 200){
+        alert(json.reply)
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <div className={`${theme == "dark" ? "bg-[#111]/80" : "bg-[#ffffff]"} ani-smooth rounded-xl p-6 shadow-lg ms:w-[90%] m-auto h-full`}>
       <h2 className={`${theme == "dark" ? "" : "text-purple-500"} text-2xl font-bold mb-6`}>{title}</h2>
-      <form className="space-y-6 ">
+      <form onSubmit={handleSubmit}  className="space-y-6 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.5rem]">
-          <input type="text" placeholder={name} className={inputClasses} />
-          <input type="email" placeholder={email} className={inputClasses} />
+          <input ref={userName} type="text" placeholder={name} className={inputClasses} />
+          <input ref={userEmail} type="email" placeholder={email} className={inputClasses} />
         </div>
-        <input type="text" placeholder={subject} className={inputClasses} />
-        <textarea rows="5" placeholder={message} className={`min-h-[4rem] max-h-[6rem] ${inputClasses}`} />
+        <input ref={mailSub} type="text" placeholder={subject} className={inputClasses} />
+        <textarea ref={userMess} rows="5" placeholder={message} className={`min-h-[4rem] max-h-[6rem] ${inputClasses}`} />
         <button type="submit" className="w-full py-3 bg-[#6B26D9] hover:bg-purple-700 rounded-lg font-semibold transition" >
           {btn}
         </button>
