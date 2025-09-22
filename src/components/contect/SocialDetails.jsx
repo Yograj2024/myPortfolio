@@ -1,9 +1,9 @@
+import { useGetTheme } from "../../customHooks/useGetAppConfig";
 import { contact } from "../../utils/constent";
-import { getTheme } from "../../utils/getAppConfig";
 
 const SocialDetails = () => {
 
-  const theme = getTheme();
+  const theme = useGetTheme();
 
   return <>
     <div className ="space-y-8 pt-[1rem] h-full">

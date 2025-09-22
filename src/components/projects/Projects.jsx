@@ -1,7 +1,6 @@
-import { gptDetails } from "../../utils/content";
-import { getLanConfig, getTheme } from "../../utils/getAppConfig";
+import { useGetLanConfig, useGetTheme } from "../../customHooks/useGetAppConfig";
+import { gptDetails, projectSec } from "../../utils/content";
 import { gitHub, goTo } from "../../utils/icons";
-import { projectSec } from "../../utils/content";
 import SectionIntro from "../SectionIntro";
 import NetflixGPT from "./NetflixGPT";
 import ProjectDetails from "./ProjectDetails";
@@ -25,8 +24,8 @@ const projects = [
 
 const Projects = () => {
 
-  const lanCode = getLanConfig("lanCode");
-  const theme = getTheme();
+  const lanCode = useGetLanConfig("lanCode");
+  const theme = useGetTheme();
   const {secHeading, secIntro} = projectSec[lanCode];
   const icons = {goTo, gitHub}
 

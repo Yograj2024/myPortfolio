@@ -1,11 +1,11 @@
 import { useMemo } from "react";
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 
-export const getLanConfig = (keys) => {
+export const useGetLanConfig = (keys) => {
     
-    const languageConfg = useSelector( store => store.appConfig.language)
-   
-   return useMemo(() => {
+  const languageConfg = useSelector( store => store.appConfig.language)
+  
+  return useMemo(() => {
 
     if (typeof keys === "string") {
       return languageConfg[keys];
@@ -23,4 +23,4 @@ export const getLanConfig = (keys) => {
     
 }
 
-export const getTheme = () => useSelector( store => store.appConfig.theme.mode)
+export const useGetTheme = () => useSelector( store => store.appConfig.theme.mode)

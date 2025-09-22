@@ -1,13 +1,13 @@
+import { useGetLanConfig, useGetTheme } from "../../customHooks/useGetAppConfig";
 import { service, skillSec } from "../../utils/content";
-import { getLanConfig, getTheme } from "../../utils/getAppConfig";
 import SectionIntro from "../SectionIntro";
 
 const Skills = () => {
 
-    const lanCode = getLanConfig("lanCode");
+    const lanCode = useGetLanConfig("lanCode");
     const {secHeading, secIntro, skillsData} = skillSec[lanCode]
     const feature = service[lanCode]
-    const theme = getTheme();
+    const theme = useGetTheme();
 
     return <section id="skill" className={`${theme == "dark" && "bg-[#0A1222]" } max-w text-white pb-[3em]`}>
 

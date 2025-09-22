@@ -1,10 +1,10 @@
+import { useGetLanConfig } from '../../customHooks/useGetAppConfig';
 import { aboutMeSec } from '../../utils/content';
-import { getLanConfig } from '../../utils/getAppConfig';
 import { exeprience } from '../../utils/icons';
 
 const WorkExperience = ({theme}) => {
 
-    const lanCode = getLanConfig("lanCode");
+    const lanCode = useGetLanConfig("lanCode");
     const { heading, position, duration, description} = aboutMeSec[lanCode].workExperienceData;
     const { company } = aboutMeSec;
     

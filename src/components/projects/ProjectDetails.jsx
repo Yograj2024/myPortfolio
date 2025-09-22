@@ -1,9 +1,9 @@
-import { getLanConfig } from "../../utils/getAppConfig";
+import { useGetLanConfig } from "../../customHooks/useGetAppConfig";
 
 
 const ProjectDetails = ({project}) => {
     
-    const lanCode = getLanConfig("lanCode");
+    const lanCode = useGetLanConfig("lanCode");
 
     const {heading, introPoints} = project[lanCode]
     const {techStack} = project

@@ -1,9 +1,9 @@
-import { getTheme } from "../utils/getAppConfig";
+import { useGetTheme } from "../customHooks/useGetAppConfig";
 
 const SectionIntro = (props) => {
 
     const {heading, para, css} = props;
-     const theme = getTheme();
+     const theme = useGetTheme();
 
     return  <div className ={`max-w ${theme == "dark" ? "text-white" : "text-black font-semibold"}`}> 
         <h2 className  ={`py-[1rem] text-[2.5rem] md:text-[4rem] font-semibold text-center capitalize `}> 

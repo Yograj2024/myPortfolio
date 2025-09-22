@@ -1,10 +1,10 @@
+import { useGetLanConfig } from '../../customHooks/useGetAppConfig';
 import { aboutMeSec } from '../../utils/content';
-import { getLanConfig } from '../../utils/getAppConfig';
 import { calendar, educationIcon, locaionIcon } from '../../utils/icons';
 
 const Education = ({theme}) => {
 
-    const lanCode = getLanConfig("lanCode");
+    const lanCode = useGetLanConfig("lanCode");
     const {educationHistory, heading} = aboutMeSec[lanCode].education 
 
     const getTimeData = (id) => {

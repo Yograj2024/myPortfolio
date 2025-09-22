@@ -1,12 +1,12 @@
+import { useGetLanConfig } from "../../customHooks/useGetAppConfig";
 import { contactSec } from "../../utils/content";
-import { getLanConfig } from "../../utils/getAppConfig";
 import SectionIntro from "../SectionIntro";
 import Form from "./Form";
 import SocialDetails from "./SocialDetails";
 
 const ContectSec = () => {
 
-  const lanCode = getLanConfig("lanCode");
+  const lanCode = useGetLanConfig("lanCode");
   const {secHeading, secIntro} = contactSec[lanCode]
 
   return <section id="contact" className ={`max-w text-slate-200 py-[2rem]`}>

@@ -5,7 +5,7 @@ export const calendar      =  " https://cdn-icons-png.flaticon.com/512/6706/6706
 export const locaionIcon   =  " https://cdn-icons-png.flaticon.com/512/18415/18415299.png "
 export const exeprience    =  " https://cdn-icons-png.flaticon.com/512/1149/1149081.png "
 export const educationIcon =  " https://cdn-icons-png.flaticon.com/512/1940/1940569.png "
-export const goTo          =  "    https://cdn-icons-png.flaticon.com/512/7268/7268615.png "
+export const goTo          =  " https://cdn-icons-png.flaticon.com/512/7268/7268615.png "
 export const gitHub        =  " https://cdn-icons-png.flaticon.com/512/2111/2111432.png "
 export const fireBase      =  " https://favicons.statusgator.com/MqOvqtHCckWT6WuS.png "
 export const tailwindIcon  =  " https://img.icons8.com/?size=256&id=4PiNHtUJVbLs&format=png "

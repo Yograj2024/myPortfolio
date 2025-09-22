@@ -1,8 +1,8 @@
-import { getTheme } from "../utils/getAppConfig";
+import { useGetTheme } from "../customHooks/useGetAppConfig";
 
 const CodeEditor = () => {
 
-    const theme = getTheme();
+    const theme = useGetTheme();
     return (
         <div className ={`hidden md:block w-[90%]  rounded-[1rem] ${theme == "dark" ? "" : "bg-[#ffffff]"} ani-smooth p-[1rem] mx-auto relative`}>
             <div className ={`h-full w-full rounded-[1rem] shadow-[0_0_4px_3px_rgba(255,0,0,0.5)] absolute top-0 right-0 z-[0] rotatePendulum  shadowPuls`}></div>

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import { getTheme } from "./utils/getAppConfig";
+import { useGetTheme } from "./customHooks/useGetAppConfig";
 
 function App() {
 
-  const mode = getTheme();
+  const mode = useGetTheme();
 
   const rootSec =  document.getElementById("root")
  

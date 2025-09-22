@@ -1,17 +1,17 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useGetLanConfig, useGetTheme } from '../customHooks/useGetAppConfig';
+import { supportedLanguage } from '../utils/constent';
 import { navBar } from '../utils/content';
-import { getLanConfig, getTheme } from '../utils/getAppConfig';
 import { codingIcon, darkMode, lightMode } from '../utils/icons';
-import { supportedLanguage } from '../utils/languageConstent';
 import { setLanguage, setTheme } from '../utils/store/slices/appConfigSlice';
 
 const NavBar = () => {
 
-  const {lanName, lanCode, flag}  = getLanConfig(["lanName", "lanCode", "flag"]);
+  const {lanName, lanCode, flag}  = useGetLanConfig(["lanName", "lanCode", "flag"]);
 
-  const theme = getTheme();
+  const theme = useGetTheme();
   const dispatch = useDispatch();
   const handleThemeChange = () => dispatch(setTheme()) 
 

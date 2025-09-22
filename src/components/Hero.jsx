@@ -1,10 +1,10 @@
+import { useGetLanConfig, useGetTheme } from "../customHooks/useGetAppConfig";
 import { heroSection } from "../utils/content";
-import { getLanConfig, getTheme } from "../utils/getAppConfig";
 import CodeEditor from "./CodeEditor";
 
 const Hero = () => {
 
-    const lanCode = getLanConfig("lanCode");
+    const lanCode = useGetLanConfig("lanCode");
 
     const handleDownLoad = () => {
         const link = document.createElement("a");
@@ -15,7 +15,7 @@ const Hero = () => {
         link.click();
     }
 
-    const theme = getTheme();
+    const theme = useGetTheme();
 
     const { firstName, lastName, greeting, role, currentWork, viewResume } = heroSection[lanCode];
 

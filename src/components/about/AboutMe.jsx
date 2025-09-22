@@ -1,4 +1,4 @@
-import { getLanConfig, getTheme } from "../../utils/getAppConfig";
+import { useGetLanConfig, useGetTheme } from "../../customHooks/useGetAppConfig";
 import { aboutMeSec } from "../../utils/content";
 import SectionIntro from "../SectionIntro";
 import Education from "./Education";
@@ -6,8 +6,8 @@ import WorkExperience from "./WorkExperience";
 
 const AboutMe = () => {
   
-  const lanCode = getLanConfig("lanCode");
-  const theme = getTheme();
+  const lanCode = useGetLanConfig("lanCode");
+  const theme = useGetTheme();
 
   const {secTitle, secIntro} = aboutMeSec[lanCode]
 
