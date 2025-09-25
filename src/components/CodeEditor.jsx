@@ -3,10 +3,9 @@ import { useGetTheme } from "../customHooks/useGetAppConfig";
 const CodeEditor = () => {
 
     const theme = useGetTheme();
-    return (
-        <div className ={`hidden md:block w-[90%]  rounded-[1rem] ${theme == "dark" ? "" : "bg-[#ffffff]"} ani-smooth p-[1rem] mx-auto relative`}>
-            <div className ={`h-full w-full rounded-[1rem] shadow-[0_0_4px_3px_rgba(255,0,0,0.5)] absolute top-0 right-0 z-[0] rotatePendulum  shadowPuls`}></div>
-            <div className ={`h-full w-full rounded-[1rem] shadow-[0_0_4px_3px_rgba(225,0,0,0.5)] absolute top-0 right-0 z-[0] rotatePendulumr  shadowPuls`}></div>
+
+    return  <div className ={`hasBefore ${theme == "dark" ? "before:bg-blue-300/70" : "before:bg-purple-400/80"}`}>
+        <div className ={`relative hidden md:block w-[90%]  rounded-[1rem] ${theme == "dark" ? "bg-slate-900" : "bg-[#ffffff]"} ani-smooth p-[1rem] mx-auto`}>
 
             {/* Browser Header */}
             <div className ="flex items-center gap-2 mb-4 pb-3 border-b border-[#1E293B]">
@@ -23,6 +22,7 @@ const CodeEditor = () => {
                 <div className ="text-muted-foreground mb-2">// Software Engineer</div>
                 
                 <div className ="mb-4">
+        
                     <span className ="text-purple-600">const</span>{" "}
                     <span className ="text-blue-600">developer</span>{" "}
                     <span className ="text-gray-600">=</span>{" "}
@@ -83,7 +83,7 @@ const CodeEditor = () => {
                 </div>
             </div>
         </div>
-    );
+    </div>
 };
 
 export default CodeEditor;  

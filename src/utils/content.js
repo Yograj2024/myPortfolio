@@ -407,3 +407,18 @@ export const contactSec = {
         }
     },
 }
+
+export const HireMeMess = {
+    hi:{
+        secHeading : "काम हेतु तत्पर",
+        para : "मैं वेब और सॉफ़्टवेयर डेवलपमेंट प्रोजेक्ट्स में फ्रीलांस के लिए तैयार हूँ। मुझे साफ़ ,स्केलेबल कोड लिखने का अनुभव है,"
+    },
+    mr:{
+        secHeading : "",
+        para : ""
+    },
+    en:{
+        secHeading : " Available to Hire",
+        para : "I’m also available for freelance projects in web and software development. I specialize in building clean, efficient, and scalable solutions, and I’m passionate about turning ideas into functional, high-quality products. Let’s collaborate to bring your project to life."
+    }
+}

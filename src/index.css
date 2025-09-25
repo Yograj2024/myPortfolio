@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-ms: 420px;
+  /* --breakpoint-ms: 420px; */
 }
 
 :root {
@@ -13,6 +13,17 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none; 
+}
+
+.hasBefore::before {
+  content: "";
+  position: absolute;
+  width: 90.1%;
+  height: 93%;
+  border-radius: 1rem;
+  right: 1.8rem;
+  transform: translateX(-50%);
+  animation: rotatePendulum 12s ease-in-out infinite;
 }
 
 @keyframes appear {
@@ -46,68 +57,31 @@
 }
 
 @keyframes rotatePendulum  {
-   0%  { transform: rotate(-1deg); }
-  25%  { transform: rotate( 1deg); }  /* aage upar */
-  50%  { transform: rotate(-1deg); }
-  75%  { transform: rotate( 1deg); }   /* piche neeche */
-  100% { transform: rotate(-1deg); }
+   0%  { transform: rotate(-6deg); }
+  25%  { transform: rotate( 6deg); }  /* aage upar */
+  50%  { transform: rotate(-6deg); }
+  75%  { transform: rotate( 6deg); }   /* piche neeche */
+  100% { transform: rotate(-6deg); }
 }
-@keyframes rotatePendulumr  {
-   0%  { transform: rotate( 1deg); }
-  25%  { transform: rotate(-1deg); }  /* aage upar */
-  50%  { transform: rotate( 1deg); }
-  75%  { transform: rotate(-1deg); }   /* piche neeche */
-  100% { transform: rotate( 1deg); }
+
+@keyframes rotate{
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+.rotate{
+  animation: rotate 6s linear infinite;
 }
 
 .rotatePendulum  {
   animation: rotatePendulum 6s ease-in-out infinite;
 }
-.rotatePendulumr  {
-  animation: rotatePendulumr 6s ease-in-out infinite;
-}
-
-@keyframes shadowPulse {
-  0%   { box-shadow: 0 0 10px rgba(0, 0, 255, 0.4); }
-  50%  { box-shadow: 0 0 25px rgba(0, 0, 255, 0.4); }
-  100% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.4); }
-}
-
-.shadowPulse {
-  animation: shadowPulse 3s ease-in-out infinite;
-}
-
-
-@keyframes hide {
-    0% { 
-   opacity: 0.8;
-  }
-  50% { 
-    opacity: 0.5;
-  }
-  100% { 
-    opacity: 0;
-  }
- 
-}
-
-.hide {
-  @apply animate-[hide_2s_ese-in-out_forwards];
-}
-
-
 
 @layer utilities {
 
-  .animate-move-left {
-    animation: moveLeft 5s linear infinite;
-  }
   .ani-smooth {
     @apply transition-all duration-400 ease-linear;
   }
-  .text-gradient-g{
-    @apply bg-clip-text text-transparent bg-gradient-to-l from-slate-50 to-green-400
-  }
+
   .text-gradient-p{
     @apply bg-clip-text text-transparent bg-gradient-to-l from-blue-400 to-purple-600
   }
@@ -115,6 +89,7 @@
   .max-w{
     @apply max-w-[1440px] m-auto
   }
+  
   .bg-main{
     @apply bg-[var(--main-bg)]
   }
@@ -125,4 +100,12 @@
     @apply after:content-[''] after:absolute after:h-full after:w-full 
   }
 
+  .shadow-inset-lg {
+    &:hover{
+      box-shadow: inset 0 2px 8px -1px rgb(140, 0, 255);
+      transform: translateY(-8px);
+    }
+  }
+
 }
+

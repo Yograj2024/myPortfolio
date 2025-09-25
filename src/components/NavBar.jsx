@@ -22,7 +22,7 @@ const NavBar = () => {
 
   const {siteTitle, navItems} = navBar
 
-  return <nav className={`max-w h-full w-full flex items-center justify-between px-[1rem] lg:px-[1.5rem]`}>
+  return <nav className={`relative z-10 max-w h-full w-full flex items-center justify-between px-[1rem] lg:px-[1.5rem]`}>
     <div className={`h-[2rem] md:h-[2.5rem] gap-x-[1rem] flex items-center md:gap-[1.5rem]`}>
       <img src={codingIcon} alt="" className={`h-full w-full object-cover`}/>
       <span className={`text-gradient-p text-[1.5rem] lg:text-[2rem] capitalize font-semibold`}>{siteTitle[lanCode]}</span>
