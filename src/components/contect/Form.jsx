@@ -41,7 +41,7 @@ const Form = () => {
     <div className={`${theme == "dark" ? "bg-[#111]/80" : "bg-[#ffffff]"} ani-smooth rounded-xl p-6 shadow-lg ms:w-[90%] m-auto h-full`}>
       <h2 className={`${theme == "dark" ? "" : "text-purple-500"} text-2xl font-bold mb-6`}>{title}</h2>
       <form onSubmit={handleSubmit}  className="space-y-6 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.5rem]">
+        <div className="grid grid-cols-1 ms:grid-cols-2 gap-[1.5rem]">
           <input ref={userName} type="text"   placeholder={name}   className={`${inputClasses} ${css}`} />
           <input ref={userEmail} type="email" placeholder={email}  className={`${inputClasses} ${css}`} />
         </div>

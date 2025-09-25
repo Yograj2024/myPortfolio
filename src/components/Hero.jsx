@@ -21,42 +21,43 @@ const Hero = () => {
     const { firstName, lastName, greeting, role, currentWork, viewResume } = heroSection[lanCode];
 
     return (
-        <section className  ={`flex items-center justify-between py-[7rem_1rem] text-[var(--main-text)] px-[1rem] lg:pl-[3rem] `}>
-            <div className ="max-w-[1440px] m-auto w-full grid md:grid-cols-[55%_auto] gap-y-[3rem] items-center">
+        <section className ={`flex items-center justify-between py-[7rem_1rem] text-[var(--main-text)] px-[1rem] lg:pl-[3rem] `}>
+            <div className="max-w-[1440px] m-auto w-full ms:grid md:grid-cols-[55%_auto] gap-y-[3rem] items-center">
                 {/* Left Content */}
-                <div className ="zoomIn space-y-[2rem]">
-                    <div className ="space-y-[1rem] lg:space-y-[2rem]">
-                        <p className ={`${theme == "dark" ? "text-white" : "text-purple-500"} font-medium text-[1rem] lg:text-[1.5rem] flex items-center gap-[1rem] `}>{greeting}</p>
-                        <h1 className ={`text-[2.25rem] ani-smooth lg:text-[4rem] font-bold leading-tight text-white`}>
-                            <span className ={`${theme == "dark" ? "text-white" : "text-black/90"} text-foreground`}>{firstName} </span>
-                            <span className ={`${theme == "dark" ? "text-white" : "text-purple-500"} relative`}> {lastName}
-                                <div className ={`absolute -bottom-2 left-0 w-full h-[2px] ${theme == "dark" ? "bg-white" : "bg-purple-600"} rounded-full`}></div>
+                <div className="zoomIn space-y-[2rem]">
+                    <div className="space-y-[1rem] lg:space-y-[2rem]">
+                        <p className={`${theme == "dark" ? "text-white" : "text-purple-500"} font-medium text-[1rem] lg:text-[1.5rem] flex items-center gap-[1rem] `}>{greeting}</p>
+                        <h1 className={`text-[2.25rem] ani-smooth lg:text-[4rem] font-bold leading-tight text-white`}>
+                            <span className={`${theme == "dark" ? "text-white" : "text-black/90"} text-foreground`}>{firstName} </span>
+                            <span className={`${theme == "dark" ? "text-white" : "text-purple-500"} relative`}> {lastName}
+                                <div className={`absolute -bottom-2 left-0 w-full h-[2px] ${theme == "dark" ? "bg-white" : "bg-purple-600"} rounded-full`}></div>
                             </span>
                         </h1>
                         
-                        <p className ={`text-[1.05rem] lg:text-2xl font-medium ${theme == "dark" ? "text-slate-400" : "text-slate-600"}`}> {role} </p>
-                        <p className ={`text-[0.85rem] lg:text-[1.12rem]       ${theme == "dark" ? "text-slate-400" : "text-slate-600"} font-semibold lg:pr-[6rem]`}> {currentWork} </p>
+                        <p className={`lg:text-2xl font-medium ${theme == "dark" ? "text-slate-400" : "text-slate-600"}`}> {role} </p>
+                        <p className={`lg:text-[1.12rem]       ${theme == "dark" ? "text-slate-400" : "text-slate-600"} font-semibold lg:pr-[6rem]`}> {currentWork} </p>
                     </div>
+                    
 
-                    <div className  ="h-[2rem] md:h-auto md:gap-x-[1rem] grid place-items-center grid-cols-[15%_15%_15%_32%] md:grid-cols-[7%_7%_7%_20%] ">
-                        {
-                            socialLinks.map( link => {
-                                const {href, icon, css} = link;
+                    <div className ="  flex flex-col ms:flex-row gap-y-[1.5rem] items-center gap-x-[3rem] ">
+                        <div className ={`flex`}>
+                            {
+                                socialLinks.map( link => {
+                                    const {href, icon, css} = link;
 
-                                return <a href={href} target="_blank" 
-                                className  ={`${css} ${theme == "dark" 
-                                ? `w-full text-[1.8rem] inset-shadow-sm hover:text-white hover:text-[1.5rem] hover:inset-shadow-purple-400`
-                                : `w-[90%] text-[1.5rem] shadow-inset-lg bg-[#AA60C8]/30 text-purple-600 ` } `}>
-                                    <i className  ={icon}></i>
-                                </a>
-                            })
-                        }
+                                    return <a href={href} target="_blank" 
+                                    className ={`h-[3rem] aspect-square ${css} ${theme == "dark" 
+                                    ? `w-full hover:translate-y-[-0.6rem] hover:shadow-[0px_0px_12px_2px_rgba(147,51,234,0.6)] inset-shadow-sm text-white text-[1.25rem] inset-shadow-purple-400`
+                                    : `text-[1.5rem] shadow-inset-lg bg-[#AA60C8]/30 text-purple-600 ` } `}>
+                                        <i className ={icon}></i>
+                                    </a>
+                                })
+                            }
+                        </div>
                         
                         <button onClick={ handleDownLoad } 
-                        className ={`flex justify-around px-[8px] items-center ani-smooth h-[85%] 
-                        w-full ml-[6rem] md:ml-[8rem] rounded-[0.5rem] 
-                        bg-gradient-to-tr from-purple-500 to-pink-500 
-                      text-white md:text-[1.25rem] `}> 
+                        className ={`flex justify-around w-[40%] ms:w-auto mt-[1rem] ms:mt-0 px-[1rem] gap-x-[0.8rem] items-center ani-smooth h-[2rem] ms:h-[2.5rem] hover:shadow-[0px_0px_12px_2px_rgba(147,51,234,0.6)] hover:scale-95
+                        rounded-[0.5rem] bg-gradient-to-tr from-purple-500 to-pink-500 text-white md:text-[1.25rem] `}> 
                             <i className ="text-orange-400 mt-[5px] animate-bounce fa-solid fa-arrow-down"></i>
                             {viewResume} 
                         </button>
@@ -64,7 +65,7 @@ const Hero = () => {
                 </div>
 
                 {/* Right Content - Code Editor */}
-                <div className  ={`h-full w-full m-auto relative`}>
+                <div className ={`h-full w-full m-auto relative`}>
                     <CodeEditor />
                 </div>
             </div>

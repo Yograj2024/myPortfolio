@@ -6,8 +6,8 @@ import NetflixGPT from "./NetflixGPT";
 import ProjectDetails from "./ProjectDetails";
 
 const projectBtns = {
-    liveDemo: { icon : "goTo",   css : "h-[0.9rem]" },
-    gitHub  : { icon : "gitHub", css : "h-[1.3rem]" },
+    liveDemo: { icon : "goTo",   css : "h-[0.9rem]",  link: "https://netflixgpt-356b2.web.app/", },
+    gitHub  : { icon : "gitHub", css : "h-[1.3rem]",  link: "https://github.com/Yograj2024/netflix-gpt", },
 }
 
 const projects = [
@@ -46,7 +46,7 @@ const Projects = () => {
               </div>
               <div className={` flex justify-around w-full sm:w-[80%] m-auto pt-[1rem]`}>
                 {
-                  btns.map( ({text, icon, css, link}) =>  <a href={link} target="_blank" rel="noopener noreferrer" className={`bg-gradient-to-r 
+                  btns.map( ({text, icon, css, link}) =>  <a href={link} target="_blank" rel="noopener noreferrer" className ={`bg-gradient-to-r 
                   ${theme == "dark" ? "from-purple-500  to-pink-300 " : " from-purple-400 to-pink-300"} transition-all duration-100 ease-in px-[1rem] py-[4px] rounded-[8px] flex items-center justify-center gap-x-[1rem]`}>
                     <span className={`inline-block ${css}`}> <img src={icons[icon]} alt="" className={`h-full w-full object-cover`}/></span>
                     {text}
