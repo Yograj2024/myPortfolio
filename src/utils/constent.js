@@ -1,5 +1,6 @@
 
 export const inputClasses = `w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-600`;
+export const postUrl = "https://portfolio-backend-nfi6.onrender.com/api/message"
 
 export const supportedLanguage = [
   { lanCode: 'hi', lanName: 'हिन्दी',    countryCode: 'IN', },
@@ -8,8 +9,8 @@ export const supportedLanguage = [
 ];
 
 const socialLinkCss = `inline-flex items-center justify-center aspect-square rounded-full mx-[1rem] inset-shadow-sm 
-transition-all duration-300 ease-linear
-`
+transition-all duration-300 ease-linear `
+
 export const socialLinks = [
     {
         href : "https://github.com/Yograj2024",
@@ -27,7 +28,6 @@ export const socialLinks = [
         css : socialLinkCss
     }
 ]
-
 export const netflixLogo = "https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-07-24/consent/87b6a5c0-0104-4e96-a291-092c11350111/019808e2-d1e7-7c0f-ad43-c485b7d9a221/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
 const phoneSvgPath = "M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.08 4.1 2 2 0 014.1 2h3a2 2 0 012 1.72c.13.95.39 1.87.78 2.73a2 2 0 01-.45 2.11L8.1 9.1a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.86.39 1.78.65 2.73.78a2 2 0 011.72 2.03z"
 

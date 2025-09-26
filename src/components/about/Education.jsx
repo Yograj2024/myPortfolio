@@ -30,12 +30,11 @@ const Education = ({theme}) => {
             />
             {
                 educationHistory.map( ({ id, institution, degree, university, location}) => {
-                    const {duration, grade} = getTimeData(id);
+                    const {duration} = getTimeData(id);
 
                     return <div key={id} className ={`text-white ${theme == "dark" ? "bg-[var(--secondry-bg)]" : "bg-[#ffffff]"}   ml-[1.5rem] w-[95%] bg-red-00 rounded-[1rem] p-[1rem] `}>
                         <h4 className ={`flex justify-between items-center font-semibold ms:pr-[1rem] mb-[0.8rem] relative before:content-[""] before:absolute before:h-[1rem] before:aspect-square before:rounded-full  before:bg-[var(--about-focus)] before:left-[-2.92rem]`}> 
                             <span className={`inline-block ${theme !== "dark" && "text-[#8754cf]"}  flex-[30%] text-[1rem] ms:text-[1.35rem]`}>{degree}</span> 
-                            <span className={`inline-block bg-[#9A5AF2]/80 rounded-[0.5rem] text-[0.9rem] px-[12px] py-[1px] ms:py-[3px]`}> {grade} </span> 
                         </h4>
 
                         <h3 className ={`text-[0.9rem] ms:text-[1.125rem] ${theme == "dark" ? "text-[var(--main-text)]" : "text-black"} mb-[5px]`}>{institution}</h3>

@@ -71,8 +71,8 @@ export const heroSection = {
 export const aboutMeSec = {
     company : "DevSoft Tech HMS",
     educationMeta  : {
-        graduation : { duration : "2021 - 2024", grade : "6.2 CGPA"  },
-        school     : { duration : "2020 - 2021", grade : "85%"  }
+        graduation : { duration : "2021 - 2024"  },
+        school     : { duration : "2020 - 2021" }
     },
     hi : {
         secTitle : "मेरे बारे में",
@@ -192,12 +192,14 @@ const skillsCore = {
         skillSet  : ["GitHub", "VS Code", "Git" ,"MySQL Workbench", "NPM", "Postman"],
     }
 }
+
 const serviceIcons = {
     userCentric : { icon: " https://cdn-icons-png.flaticon.com/512/18743/18743455.png" },
     cleanCode   : { icon: "https://cdn-icons-png.flaticon.com/512/17365/17365478.png " },
     design      : { icon: " https://cdn-icons-png.flaticon.com/512/10982/10982562.png" },
     performance : { icon: "https://cdn-icons-png.flaticon.com/512/18882/18882511.png " }
 }
+
 export const service = {
     hi:[
         {
