@@ -15,10 +15,10 @@ const Education = ({theme}) => {
 
     return <div className={`w-full mt-[2rem] md:mt-0`}>
         <h3 className={`text-[1.875rem] md:text-[2.5rem] font-semibold flex items-center gap-x-[1rem] `}>  
-            <span className={`h-[2.5rem] md:h-[3rem] aspect-square inline-flex items-center bg-gradient-to-l from-blue-200 to-purple-400 rounded-full p-[6px] mt-[0.5rem]`}> 
+            <span className={`autoRotate h-[2.5rem] md:h-[3rem] aspect-square inline-flex items-center bg-gradient-to-l from-blue-200 to-purple-400 rounded-full p-[6px] mt-[0.5rem]`}> 
                 <img src={educationIcon} alt=""  className={`h-full w-full object-cover inline-block`}/>
             </span>  
-            <span className={`text-gradient-p`}>
+            <span className={`autoShow text-gradient-p`}>
                 {heading}
             </span>
         </h3>
@@ -32,7 +32,7 @@ const Education = ({theme}) => {
                 educationHistory.map( ({ id, institution, degree, university, location}) => {
                     const {duration} = getTimeData(id);
 
-                    return <div key={id} className ={`text-white ${theme == "dark" ? "bg-[var(--secondry-bg)]" : "bg-[#ffffff]"}   ml-[1.5rem] w-[95%] bg-red-00 rounded-[1rem] p-[1rem] `}>
+                    return <div key={id} className ={`ani-smooth hover:shadow-[0px_0px_18px_1px_rgb(140,0,255)] text-white ${theme == "dark" ? "bg-[var(--secondry-bg)]" : "bg-[#ffffff]"}   ml-[1.5rem] w-[95%] bg-red-00 rounded-[1rem] p-[1rem] `}>
                         <h4 className ={`flex justify-between items-center font-semibold ms:pr-[1rem] mb-[0.8rem] relative before:content-[""] before:absolute before:h-[1rem] before:aspect-square before:rounded-full  before:bg-[var(--about-focus)] before:left-[-2.92rem]`}> 
                             <span className={`inline-block ${theme !== "dark" && "text-[#8754cf]"}  flex-[30%] text-[1rem] ms:text-[1.35rem]`}>{degree}</span> 
                         </h4>

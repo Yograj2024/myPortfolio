@@ -18,7 +18,7 @@ const Skills = () => {
                 skillsData.map((section, idx) => {
                     const {iconCs, icon, title, skillSet} = section;
 
-                    return <div key={idx} className={`element ${theme !== "dark" ? "bg-[#ffffff]/90" : "bg-main"}  p-[1.5rem_0.5rem_1.5rem_1rem] rounded-[0.8rem]`}>
+                    return <div key={idx} className ={`ani-smooth hover:shadow-[0px_0px_8px_2px_rgb(140,0,255)] hover:scale-[101%] element ${theme !== "dark" ? "bg-[#ffffff]/90" : "bg-main"}  p-[1.5rem_0.5rem_1.5rem_1rem] rounded-[0.8rem]`}>
                         <h4 className={`${theme == "dark" ? "" : "text-purple-600"} flex items-center text-[1.35rem] md:text-[1.6rem] pl-[0.5rem] capitalize gap-x-[1rem]`}>
                             <span className={`inline-block h-[1.2rem] md:h-[1.5rem] ${iconCs} rounded-[0.5rem] box-content p-[8px]`}>
                                 <img src={icon} alt="" className="h-full w-full object-cover" />

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useGetLanConfig, useGetTheme } from "../../customHooks/useGetAppConfig";
-import { inputClasses, postUrl } from "../../utils/constent";
+import { inputClasses } from "../../utils/constent";
 import { contactSec } from "../../utils/content";
 
 const Form = () => {
@@ -25,7 +25,7 @@ const Form = () => {
     };
     
     try {
-      const result = await fetch(postUrl, {
+      const result = await fetch("https://portfolio-backend-6zcw.onrender.com/api/message", {
         method  : "POST",
         headers : { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -4,7 +4,7 @@ const CodeEditor = () => {
 
     const theme = useGetTheme();
 
-    return  <div className ={`hasBefore ${theme == "dark" ? "before:bg-blue-300/70" : "before:bg-purple-400/80"}`}>
+    return  <div className ={`hasBefore ${theme == "dark" ? "before:bg-slate-500/40" : "before:bg-[#E7DBF7]"}`}>
         <div className ={`relative hidden md:block w-[90%]  rounded-[1rem] ${theme == "dark" ? "bg-slate-900" : "bg-[#ffffff]"} ani-smooth p-[1rem] mx-auto`}>
 
             {/* Browser Header */}
@@ -50,8 +50,6 @@ const CodeEditor = () => {
                             <span className ="text-green-600">'ryog7910@gmail.com'</span> <br />
                             <span className ="text-red-500">github &nbsp;&nbsp;:</span>{" "}
                             <span className ="text-green-600">'https://github.com/Yograj2024'</span> <br />
-                            {/* <span className ="text-red-500">linkedin&nbsp;:</span>{" "} */}
-                            {/* <span className ="text-green-600">'https://www.linkedin.com/in/yograj-singh-750a07315'</span> <br /> */}
                         </div>
                         <span className ="text-yellow-600">{"}"}</span>
                         <span className ="text-gray-600">,</span>

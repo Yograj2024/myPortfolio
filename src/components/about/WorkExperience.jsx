@@ -9,9 +9,9 @@ const WorkExperience = ({theme}) => {
     const { company } = aboutMeSec;
     
 
-    return <div className={` w-full`}>
+    return <div className ={`w-full`}>
         <h3 className={`text-[1.875rem] md:text-[2.5rem] font-semibold mb-[2rem] flex items-center gap-x-[1rem]`}>  
-            <span className={`h-[2.5rem] md:h-[3rem] aspect-square inline-flex  bg-gradient-to-l from-blue-200 to-purple-400 rounded-full p-[10px] mt-[0.5rem]`}> 
+            <span className={`autoRotate h-[2.5rem] md:h-[3rem] aspect-square inline-flex  bg-gradient-to-l from-blue-200 to-purple-400 rounded-full p-[10px] mt-[0.5rem]`}> 
                 <img src={exeprience} alt=""  className={`h-full w-full object-cover inline-block`}/>
             </span> 
             <span className={`text-gradient-p`}>
@@ -19,7 +19,7 @@ const WorkExperience = ({theme}) => {
             </span> 
         </h3>
 
-        <div className ={`relative md:w-[95%] ${theme == "dark" ? "text-white bg-[var(--secondry-bg)]" : "bg-[#ffffff]"} rounded-[1rem] py-[1rem] px-[1rem] md:px-[1.5rem]`}>
+        <div className ={`ani-smooth hover:shadow-[0px_0px_8px_2px_rgb(140,0,255)] hover:scale-[101%]  relative md:w-[95%] ${theme == "dark" ? "text-white bg-[var(--secondry-bg)]" : "bg-[#ffffff]"} rounded-[1rem] py-[1rem] px-[1rem] md:px-[1.5rem]`}>
             
             <h2 className={`text-[1.5rem] ${theme !== "dark" && "text-[#8754cf]"}  capitalize font-semibold mb-[1rem]`}>{position}</h2>
             <strong className ={`w-full flex justify-between items-center text-[var(--main-text)]`}> 

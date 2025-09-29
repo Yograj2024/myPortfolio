@@ -9,7 +9,7 @@ const ContectSec = () => {
   const lanCode = useGetLanConfig("lanCode");
   const {secHeading, secIntro} = contactSec[lanCode]
 
-  return <section id="contact" className ={`max-w text-slate-200 py-[2rem]`}>
+  return <section id="contact" className ={`contactSec max-w text-slate-200 py-[2rem]`}>
 
     <SectionIntro heading={secHeading} para={secIntro} />
 
